@@ -28,11 +28,11 @@ int main()
 {
 	int sum;
 	int diff;
-	int prod;
+	float prod;
 
 	sum = add(9, 5);
 	diff = sub(9, 5);
-	prod = mul(9, 5);
+	prod = mul(9.0f, 5.0f);
 
-	printf("The sum is %d, the difference is %d, and the product is %d.\n", sum, diff, prod);
+	printf("The sum is %d, the difference is %d, and the product is %f.\n", sum, diff, prod);
 }
