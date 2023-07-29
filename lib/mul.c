@@ -24,8 +24,8 @@
 #include <stdio.h>
 #include "badmath/badmath.h"
 
-int mul(int a, int b)
+float mul(float a, float b)
 {
-	printf("%d * %d = %d\n", a, b, (a * b));
+	printf("%f * %f = %f\n", a, b, (a * b));
 	return a * b;
 }

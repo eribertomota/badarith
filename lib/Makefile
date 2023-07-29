@@ -9,8 +9,8 @@ mandir = $(datarootdir)/man
 NAME = badmath
 LIBRARY_NAME = lib$(NAME)
 $(LIBRARY_NAME)_OBJS = add.o sub.o mul.o
-LIBRARY_MAJOR = 1
-LIBRARY_MINOR = 3
+LIBRARY_MAJOR = 2
+LIBRARY_MINOR = 0
 LIBRARY_PATCH = 0
 LIBRARY_VERSION = $(LIBRARY_MAJOR).$(LIBRARY_MINOR).$(LIBRARY_PATCH)
 
@@ -43,7 +43,6 @@ installdirs:
 install: installdirs
 	$(INSTALL_DATA) $(INSTALL_FLAGS) $(LIBRARY_NAME).so.$(LIBRARY_VERSION) $(DESTDIR)$(libdir)/
 	cd $(DESTDIR)$(libdir); $(LN) $(LIBRARY_NAME).so.$(LIBRARY_VERSION) $(LIBRARY_NAME).so.$(LIBRARY_MAJOR)
-	cd $(DESTDIR)$(libdir); $(LN) $(LIBRARY_NAME).so.$(LIBRARY_MAJOR) $(LIBRARY_NAME).so
 	$(INSTALL_DATA) $(NAME)/$(NAME).h $(DESTDIR)$(includedir)/$(NAME)/$(NAME).h
 
 install-strip: INSTALL_FLAGS = -s
@@ -56,7 +55,6 @@ uninstalldirs:
 uninstallfiles:
 	$(RM) $(DESTDIR)$(libdir)/$(LIBRARY_NAME).so.$(LIBRARY_VERSION)
 	$(RM) $(DESTDIR)$(libdir)/$(LIBRARY_NAME).so.$(LIBRARY_MAJOR)
-	$(RM) $(DESTDIR)$(libdir)/$(LIBRARY_NAME).so
 	$(RM) $(DESTDIR)$(includedir)/$(NAME)/$(NAME).h
 
 uninstall: uninstallfiles uninstalldirs
