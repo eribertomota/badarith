@@ -1,5 +1,5 @@
 /*
- * add.c - addition module for libbadmath
+ * mul.c - multiplication module for libbadmath
  * Copyright (c) 2023 David da Silva Polverari
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -21,11 +21,11 @@
  * SOFTWARE.
  */
 
-#ifndef __BADMATH_H
-#define __BADMATH_H
+#include <stdio.h>
+#include "badmath/badmath.h"
 
-int add(int a, int b);
-int sub(int a, int b);
-int mul(int a, int b);
-
-#endif /* __BADMATH_H */
+int mul(int a, int b)
+{
+	printf("%d * %d = %d\n", a, b, (a * b));
+	return a * b;
+}

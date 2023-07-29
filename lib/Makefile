@@ -8,9 +8,9 @@ mandir = $(datarootdir)/man
 
 NAME = badmath
 LIBRARY_NAME = lib$(NAME)
-$(LIBRARY_NAME)_OBJS = add.o sub.o
+$(LIBRARY_NAME)_OBJS = add.o sub.o mul.o
 LIBRARY_MAJOR = 1
-LIBRARY_MINOR = 2
+LIBRARY_MINOR = 3
 LIBRARY_PATCH = 0
 LIBRARY_VERSION = $(LIBRARY_MAJOR).$(LIBRARY_MINOR).$(LIBRARY_PATCH)
 
